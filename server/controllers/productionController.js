@@ -126,8 +126,18 @@ const getBomLineDetails = async (req, res) => {
  */
 const generateProductionFile = async (req, res) => {
   try {
+    const { startDate, endDate, showNoCommitmentOrders } = req.query;
+
+    if (!startDate || !endDate) {
+      return res.status(400).json({
+        message: 'Date range parameters (startDate and endDate) are required'
+      });
+    }
+
+    const includeNoCommitmentOrders = showNoCommitmentOrders === 'true';
+
     // Get query
-    const query = getProductionScheduleQuery();
+    const query = getProductionScheduleQuery(startDate, endDate, includeNoCommitmentOrders);
     
     // Execute query
     const { rows } = await pool.query(query);
@@ -144,6 +154,7 @@ const generateProductionFile = async (req, res) => {
     const dockerPath = '/app/production_schedule.json';
     const localPath = path.join(__dirname, '../../production_schedule.json');
     
+    let filePath = dockerPath;
     try {
       // Try Docker path first
       fs.writeFileSync(dockerPath, JSON.stringify(formattedData, null, 2));
@@ -153,6 +164,7 @@ const generateProductionFile = async (req, res) => {
       // Fall back to local path
       fs.writeFileSync(localPath, JSON.stringify(formattedData, null, 2));
       console.log(`Successfully wrote production schedule to local path: ${localPath}`);
+      filePath = localPath;
     }
     
     // Also write to the current directory as an additional fallback
@@ -164,9 +176,9 @@ const generateProductionFile = async (req, res) => {
       console.warn(`Could not write to current directory (${currentDirPath})`, localWriteError);
     }
     
-    return res.status(200).json({ 
+    return res.status(200).json({
       message: 'Production schedule file generated successfully',
-      filePath: filePath
+      filePath
     });
   } catch (error) {
     console.error('Error generating production file:', error);
@@ -202,20 +214,29 @@ const searchBillOfMaterials = async (req, res) => {
         // Filter components based on search criteria
         const matchingComponents = components.filter(comp => {
           let matches = true;
-          
-          if (component && !comp.product_name.toLowerCase().includes(component.toLowerCase()) && 
-              !comp.product_code.toLowerCase().includes(component.toLowerCase())) {
-            matches = false;
+
+          if (component) {
+            const compName = (comp.product_name || '').toLowerCase();
+            const compCode = (comp.product_code || '').toLowerCase();
+            if (!compName.includes(component.toLowerCase()) && !compCode.includes(component.toLowerCase())) {
+              matches = false;
+            }
           }
-          
-          if (location && !comp.location_name.toLowerCase().includes(location.toLowerCase())) {
-            matches = false;
+
+          if (location) {
+            const locName = (comp.location_name || '').toLowerCase();
+            if (!locName.includes(location.toLowerCase())) {
+              matches = false;
+            }
           }
-          
-          if (materialId && comp.product_id !== materialId && comp.line_id !== materialId) {
-            matches = false;
+
+          if (materialId) {
+            const id = Number(materialId);
+            if (comp.product_id !== id && comp.line_id !== id) {
+              matches = false;
+            }
           }
-          
+
           return matches;
         });
         
