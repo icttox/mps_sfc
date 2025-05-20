@@ -967,8 +967,10 @@ const SegmentFolioCuts = () => {
           `}</style>
         </div>
       ) : selectedSegment && filteredDetails.length > 0 ? (
-        <div style={{ 
+        <div style={{
           overflowX: 'auto',
+          overflowY: 'auto',
+          maxHeight: '70vh',
           boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
           borderRadius: '10px',
           marginTop: '20px',
