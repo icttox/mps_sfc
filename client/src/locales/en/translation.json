@@ -1,0 +1,295 @@
+{
+  "header": {
+    "title": "GEBESA PRODUCTION",
+    "home": "Home",
+    "calendar": "Calendar",
+    "mps": "MPS",
+    "sfc": "SFC",
+    "language": "Language",
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "app": {
+    "loading": "Checking database connectivity...",
+    "error": "A connection problem with the database was detected. The system cannot access production data at this time.",
+    "errorPersist": "If this problem persists, contact your system administrator.",
+    "lastAttempt": "Last attempt:"
+  },
+  "homePage": {
+    "welcome": "Welcome to the Production Management System",
+    "description": "Manage and optimize your production with our specialized tools.",
+    "quickAccess": "Quick Access",
+    "calendar": "Production Calendar",
+    "mps": "Master Production Schedule",
+    "sfc": "Shop Floor Control",
+    "calendarDescription": "View and manage production scheduling in an interactive calendar.",
+    "openCalendarView": "Go to Calendar View",
+    "mpsDescription": "Master Production Schedule: Plan and optimize your long-term production.",
+    "openMpsView": "Go to MPS View",
+    "sfcDescription": "Real-time shop floor control and tracking. Manage orders, monitor progress, and optimize plant workflow.",
+    "openSfcView": "Go to SFC View",
+    "footer": "Production Schedule Management System"
+  },
+  "calendar": {
+    "title": "Production Calendar",
+    "today": "Today",
+    "month": "Month",
+    "week": "Week",
+    "day": "Day",
+    "event": "Event",
+    "resource": "Resource",
+    "viewDetails": "View Details",
+    "units": "Units",
+    "quantity": "Quantity",
+    "productCode": "Product Code",
+    "productName": "Product Name",
+    "workstation": "Workstation",
+    "workstations": "Workstations",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "status": "Status",
+    "priority": "Priority",
+    "products": "Products",
+    "salesOrders": "Sales Orders",
+    "cuts": "Cuts",
+    "workorders": "Work Orders",
+    "manufacturingOrder": "Manufacturing Order",
+    "filter": {
+      "allWorkstations": "All workstations",
+      "selectAll": "Select All",
+      "clearAll": "Clear All",
+      "noItems": "No items available"
+    },
+    "weekDays": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "short": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      }
+    },
+    "details": {
+      "title": "Event Details",
+      "close": "Close",
+      "noInfo": "No information available"
+    },
+    "filters": {
+      "title": "Filters",
+      "workstation": "Workstation",
+      "product": "Product",
+      "order": "Order",
+      "date": "Date",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters"
+    },
+    "events": {
+      "product": {
+        "title": "Product",
+        "code": "Code",
+        "name": "Name",
+        "quantity": "Quantity",
+        "uom": "Unit of Measure"
+      },
+      "salesOrder": {
+        "title": "Sales Order",
+        "number": "Number",
+        "partner": "Customer"
+      },
+      "cut": {
+        "title": "Cut",
+        "key": "Key",
+        "caliber": "Caliber"
+      },
+      "workorder": {
+        "title": "Work Order",
+        "state": "State",
+        "workcenter": "Work Center",
+        "quantity": "Quantity"
+      }
+    },
+    "modal": {
+      "title": "Details",
+      "close": "Close",
+      "status": "Status",
+      "priority": "Priority",
+      "dates": "Dates",
+      "resources": "Resources"
+    },
+    "search": {
+      "placeholder": "Search...",
+      "type": {
+        "product": "Product",
+        "salesOrder": "Sales Order",
+        "cut": "Cut",
+        "workorder": "Work Order"
+      }
+    }
+  },
+  "mps": {
+    "title": "Master Production Schedule",
+    "filters": {
+      "title": "Filters",
+      "dateRange": "Date Range",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "apply": "Apply",
+      "clear": "Clear",
+      "search": "Search",
+      "searchProduct": "Search product...",
+      "searchOrder": "Search order...",
+      "searchMO": "Search manufacturing order...",
+      "searchCut": "Search cut...",
+      "searchSegment": "Search segment...",
+      "showNoCommitment": "Show orders without commitment",
+      "exportToExcel": "Export to Excel",
+      "filterByDate": "Filter by date",
+      "noCommitmentIncluded": "Sales orders WITHOUT commitment dates WILL be included in calculations.",
+      "noCommitmentExcluded": "Sales orders WITHOUT commitment dates will NOT be included in calculations.",
+      "off": "Show orders without commitment",
+      "dateRangeInfo": "Sales orders WITHOUT commitment dates will NOT be included in calculations."
+    },
+    "table": {
+      "product": "Product",
+      "code": "Code",
+      "name": "Name",
+      "quantity": "Quantity",
+      "uom": "UoM",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "actions": "Actions",
+      "customer": "Customer",
+      "orderNumber": "Order Number",
+      "commitment": "Commitment",
+      "workCenter": "Work Center",
+      "priority": "Priority",
+      "manufacturingOrder": "Manufacturing Order",
+      "cutDetail": "Cut Detail",
+      "segment": "Segment",
+      "location": "Location"
+    },
+    "status": {
+      "planned": "Planned",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noCommitment": "No Commitment",
+      "delayed": "Delayed",
+      "onTime": "On Time"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "export": "Export",
+      "save": "Save"
+    },
+    "noData": "No data available",
+    "loading": "Loading...",
+    "error": {
+      "fetchData": "Error loading data",
+      "database": "Database connection not available. Cannot fetch production data.",
+      "dateRange": "Please specify both start and end dates to filter production data.",
+      "notFound": "No production data found for the specified date range.",
+      "invalidRange": "Invalid date range.",
+      "server": "Database server error. Please try again later."
+    },
+    "success": {
+      "dataSaved": "Data saved successfully",
+      "dataExported": "Data exported successfully"
+    },
+    "modal": {
+      "productDetails": "Product Details",
+      "close": "Close"
+    },
+    "noDataLoaded": "No data loaded",
+    "selectDateRange": "Please select a date range"
+  },
+  "sfc": {
+    "title": "Shop Floor Control",
+    "search": {
+      "placeholder": "Search by folio or name...",
+      "noResults": "No results found",
+      "error": "Error searching. Please try again.",
+      "loading": "Searching..."
+    },
+    "filters": {
+      "title": "Detailed Filters",
+      "folio": "Segment Folio",
+      "folio.placeholder": "Filter by segment folio...",
+      "production": "Manufacturing Order",
+      "production.placeholder": "Filter by manufacturing order...",
+      "order": "Sales Order",
+      "order.placeholder": "Filter by sales order...",
+      "product_code": "Product Code",
+      "product_code.placeholder": "Filter by product code...",
+      "clear": "Clear Filters"
+    },
+    "location": {
+      "title": "Location Filter",
+      "select": "Select Location",
+      "filter": "Filter by Location",
+      "info": "Select a location and click the filter button to view segments at that location"
+    },
+    "table": {
+      "noData": "No data available",
+      "loading": "Loading data...",
+      "export": "Export to Excel",
+      "print": "Print",
+      "pdf": "Export to PDF",
+      "folio": "Segment Folio",
+      "location": "Location",
+      "segment": "Segment Reference",
+      "state": "Segment State",
+      "production": "Production",
+      "order": "Order",
+      "product_qty": "Product Quantity",
+      "product": "Product",
+      "color": "Color",
+      "thickness": "Thickness",
+      "side": "Side",
+      "width_cut": "Width Cut",
+      "long_cut": "Length Cut",
+      "showing": "Showing {{start}} - {{end}} of {{total}} records"
+    },
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next",
+      "info": "Page {{currentPage}} of {{totalPages}}"
+    },
+    "loading": "Loading segment details...",
+    "no_results": "No results found for the selected filters",
+    "no_results_info": "Try adjusting your filters or select a different location",
+    "select_location": "Select a location to get started",
+    "select_location_info": "Choose a location from the dropdown above and click the \"Filter by Location\" button",
+    "export": {
+      "excel": "Export to Excel",
+      "pdf": "Export to PDF"
+    }
+  },
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "apply": "Apply",
+    "clear": "Clear",
+    "loading": "Loading data...",
+    "noData": "No data available",
+    "close": "Close",
+    "view": "View",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "export": "Export"
+  }
+}

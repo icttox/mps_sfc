@@ -1,0 +1,278 @@
+{
+  "header": {
+    "title": "GEBESA PRODUCCIÓN",
+    "home": "Inicio",
+    "calendar": "Vista Calendario",
+    "mps": "Vista MPS",
+    "sfc": "Vista SFC"
+  },
+  "app": {
+    "loading": "Verificando conectividad con la base de datos...",
+    "error": "Se detectó un problema de conexión con la base de datos. El sistema no puede acceder a los datos de producción en este momento.",
+    "errorPersist": "Si este problema persiste, contacte a su administrador de sistema.",
+    "lastAttempt": "Último intento:"
+  },
+  "homePage": {
+    "welcome": "Bienvenido al Sistema de Producción GEBESA",
+    "description": "Seleccione un módulo del menú de navegación para comenzar",
+    "quickAccess": "Acceso Rápido",
+    "calendar": "Calendario de Producción",
+    "mps": "Programa Maestro de Producción",
+    "sfc": "Control de Piso de Producción",
+    "calendarDescription": "Visualice y gestione su programa de producción en un calendario interactivo. Vea órdenes de fabricación, actividades y recursos en una línea de tiempo.",
+    "openCalendarView": "Ir a Vista Calendario",
+    "mpsDescription": "Gestione el programa maestro de producción. Planifique y optimice la producción a mediano y largo plazo, asignando recursos y fechas de manera eficiente.",
+    "openMpsView": "Ir a Vista MPS",
+    "sfcDescription": "Control y seguimiento en tiempo real de la producción en piso. Gestione órdenes, monitoree el progreso y optimice el flujo de trabajo en la planta.",
+    "openSfcView": "Ir a Vista SFC",
+    "footer": "Sistema de Gestión de Programa de Producción ©"
+  },
+  "calendar": {
+    "title": "Calendario de Producción",
+    "today": "Hoy",
+    "month": "Mes",
+    "week": "Semana",
+    "day": "Día",
+    "event": "Evento",
+    "resource": "Recurso",
+    "viewDetails": "Ver Detalles",
+    "units": "Unidades",
+    "quantity": "Cantidad",
+    "productCode": "Código de Producto",
+    "productName": "Nombre de Producto",
+    "workstation": "Ubicación",
+    "workstations": "Ubicaciones",
+    "startDate": "Fecha Inicio",
+    "endDate": "Fecha Fin",
+    "status": "Estado",
+    "priority": "Prioridad",
+    "products": "Productos",
+    "salesOrders": "Órdenes de Venta",
+    "cuts": "Cortes",
+    "workorders": "Órdenes de Trabajo",
+    "manufacturingOrder": "Orden de Fabricación",
+    "filter": {
+      "allWorkstations": "Todas las ubicaciones",
+      "selectAll": "Seleccionar Todo",
+      "clearAll": "Limpiar Todo",
+      "noItems": "No hay elementos disponibles",
+      "selected": "seleccionados"
+    },
+    "weekDays": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo",
+      "short": {
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mié",
+        "thu": "Jue",
+        "fri": "Vie",
+        "sat": "Sáb",
+        "sun": "Dom"
+      }
+    },
+    "details": {
+      "title": "Detalles del Evento",
+      "close": "Cerrar",
+      "noInfo": "No hay información disponible"
+    },
+    "filters": {
+      "title": "Filtros",
+      "workstation": "Estación de Trabajo",
+      "product": "Producto",
+      "order": "Orden",
+      "date": "Fecha",
+      "apply": "Aplicar Filtros",
+      "clear": "Limpiar Filtros"
+    },
+    "events": {
+      "product": {
+        "title": "Producto",
+        "code": "Código",
+        "name": "Nombre",
+        "quantity": "Cantidad",
+        "uom": "Unidad de Medida"
+      },
+      "salesOrder": {
+        "title": "Orden de Venta",
+        "number": "Número",
+        "partner": "Cliente"
+      },
+      "cut": {
+        "title": "Corte",
+        "key": "Clave",
+        "caliber": "Calibre"
+      },
+      "workorder": {
+        "title": "Orden de Trabajo",
+        "state": "Estado",
+        "workcenter": "Centro de Trabajo",
+        "quantity": "Cantidad"
+      }
+    },
+    "modal": {
+      "title": "Detalles",
+      "close": "Cerrar",
+      "status": "Estado",
+      "priority": "Prioridad",
+      "dates": "Fechas",
+      "resources": "Recursos"
+    },
+    "search": {
+      "placeholder": "Buscar...",
+      "type": {
+        "product": "Producto",
+        "salesOrder": "Orden de Venta",
+        "cut": "Corte",
+        "workorder": "Orden de Trabajo"
+      }
+    }
+  },
+  "mps": {
+    "title": "Programa Maestro de Producción",
+    "locations": "Ubicaciones",
+    "clearFilters": "Limpiar Filtros",
+    "item": "Artículo",
+    "forecastedDemand": "Demanda Prevista",
+    "export": "Exportar Excel",
+    "save": "Guardar datos MPS",
+    "filters": {
+      "title": "Filtros",
+      "dateRange": "Rango de Fechas",
+      "startDate": "Fecha Inicio",
+      "endDate": "Fecha Fin",
+      "apply": "Aplicar filtro",
+      "clear": "Limpiar filtro",
+      "search": "Buscar",
+      "searchProduct": "Buscar producto...",
+      "searchOrder": "Buscar orden...",
+      "showNoCommitment": "Mostrar órdenes de venta sin fechas de compromiso",
+      "off": "(OFF)",
+      "on": "(ON)",
+      "dateRangeInfo": "Establezca un rango de fechas para filtrar los datos de producción. El filtro incluirá las órdenes de fabricación que: (1) tengan fechas de producción dentro del rango, O (2) estén vinculadas a órdenes de venta con fechas de compromiso dentro del rango.",
+      "noCommitmentExcluded": "✗ Las órdenes de venta sin fechas de compromiso NO se incluirán en los cálculos.",
+      "noCommitmentIncluded": "✓ Las órdenes de venta sin fechas de compromiso se incluirán en los cálculos.",
+      "exportToExcel": "Exportar a Excel",
+      "filterByDate": "Filtrar por fecha"
+    },
+    "table": {
+      "product": "Producto",
+      "salesOrder": "Orden de Venta",
+      "manufacturingOrder": "Orden de Fabricación",
+      "cutDetail": "Detalle de Corte",
+      "segment": "Segmento",
+      "searchProduct": "Buscar producto...",
+      "searchOrder": "Buscar SO...",
+      "searchMO": "Buscar MO...",
+      "searchCutDetail": "Buscar detalle de corte...",
+      "searchSegment": "Buscar segmento..."
+    },
+    "status": {
+      "planned": "Planificado",
+      "inProgress": "En Progreso",
+      "completed": "Completado",
+      "cancelled": "Cancelado",
+      "noCommitment": "Sin Compromiso",
+      "delayed": "Retrasado",
+      "onTime": "A Tiempo"
+    },
+    "actions": {
+      "view": "Ver",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "export": "Exportar",
+      "save": "Guardar"
+    },
+    "noData": "No hay datos disponibles",
+    "noDataLoaded": "No hay datos cargados",
+    "selectDateRange": "Seleccione un rango de fechas y haga clic en Aplicar filtro para cargar datos de producción.",
+    "loading": "Cargando...",
+    "error": "Error al cargar los datos",
+    "success": {
+      "dataSaved": "Datos guardados correctamente",
+      "dataExported": "Datos exportados correctamente"
+    }
+  },
+  "sfc": {
+    "title": "Control de Piso de Producción",
+    "search": {
+      "placeholder": "Buscar por folio o nombre...",
+      "noResults": "No se encontraron resultados",
+      "error": "Error al buscar. Por favor intente de nuevo.",
+      "loading": "Buscando..."
+    },
+    "filters": {
+      "title": "Filtros Detallados",
+      "folio": "Folio de Segmento",
+      "folio.placeholder": "Filtrar por folio de segmento...",
+      "production": "Orden de Fabricación",
+      "production.placeholder": "Filtrar por orden de fabricación...",
+      "order": "Orden de Venta",
+      "order.placeholder": "Filtrar por orden de venta...",
+      "product_code": "Código de Producto",
+      "product_code.placeholder": "Filtrar por código de producto...",
+      "clear": "Limpiar Filtros"
+    },
+    "location": {
+      "title": "Filtro de Ubicación",
+      "select": "Seleccionar Ubicación",
+      "filter": "Filtrar por Ubicación",
+      "info": "Seleccione una ubicación y haga clic en el botón de filtro para ver los segmentos en esa ubicación"
+    },
+    "table": {
+      "noData": "No hay datos disponibles",
+      "loading": "Cargando datos...",
+      "export": "Exportar a Excel",
+      "print": "Imprimir",
+      "pdf": "PDF",
+      "folio": "Folio de Segmento",
+      "location": "Ubicación",
+      "segment": "Referencia de Segmento",
+      "state": "Estado del Segmento",
+      "production": "MO",
+      "order": "SO",
+      "product_qty": "Cantidad de Producto",
+      "product": "Producto",
+      "color": "Color",
+      "thickness": "Grosor",
+      "side": "Caras",
+      "width_cut": "Ancho de Corte",
+      "long_cut": "Largo de Corte",
+      "showing": "Mostrando {{start}} - {{end}} de {{total}} registros"
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "info": "Página {{currentPage}} de {{totalPages}}"
+    },
+    "loading": "Cargando detalles del segmento...",
+    "no_results": "No se encontraron resultados para los filtros seleccionados",
+    "no_results_info": "Intente ajustar sus filtros o seleccione una ubicación diferente",
+    "select_location": "Seleccione una ubicación para comenzar",
+    "select_location_info": "Elija una ubicación del menú desplegable y haga clic en el botón \"Filtrar por Ubicación\"",
+    "export": {
+      "excel": "Exportar a Excel",
+      "pdf": "PDF"
+    }
+  },
+  "common": {
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "apply": "Aplicar",
+    "clear": "Limpiar",
+    "loading": "Cargando datos...",
+    "noData": "No hay datos disponibles",
+    "close": "Cerrar",
+    "view": "Ver",
+    "edit": "Editar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "export": "Exportar"
+  }
+}

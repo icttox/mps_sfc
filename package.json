@@ -1,0 +1,29 @@
+{
+  "name": "production_schedule",
+  "version": "1.0.0",
+  "description": "Production Schedule Application for a furniture manufacturing company",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "server": "cd server && npm run server",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "production",
+    "schedule",
+    "manufacturing",
+    "mern",
+    "furniture"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2"
+  }
+}

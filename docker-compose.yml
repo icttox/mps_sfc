@@ -1,0 +1,40 @@
+services:
+  server:
+    build: ./server
+    container_name: production_server
+    restart: always
+    environment:
+      NODE_ENV: production
+      PORT: 5001
+      # Let the application use the DB connection from .env file
+      # The environment variables below are removed to use ones from .env file
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./production_schedule.json:/app/production_schedule.json
+      - ./server/.env:/app/.env
+    networks:
+      - mps_network
+
+  client:
+    build: ./client
+    container_name: production_client
+    restart: always
+    depends_on:
+      - server
+    ports:
+      - "8090:8090"
+    networks:
+      - mps_network
+
+volumes:
+  shared_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./shared_mps_data
+
+networks:
+  mps_network:
+    driver: bridge
