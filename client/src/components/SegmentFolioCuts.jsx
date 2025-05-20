@@ -76,6 +76,12 @@ const TextFilter = ({ label, value, onChange, placeholder, onClear }) => {
 
 const SegmentFolioCuts = () => {
   const { t } = useTranslation();
+  const baseCellStyle = {
+    padding: '12px 15px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  };
   // State for search parameters and results
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -976,9 +982,11 @@ const SegmentFolioCuts = () => {
           marginTop: '20px',
           border: '1px solid #e8eef3'
         }}>
-          <table style={{ 
-            width: '100%', 
-            borderCollapse: 'collapse',
+          <table style={{
+            width: '100%',
+            borderCollapse: 'separate',
+            borderSpacing: '0 6px',
+            tableLayout: 'fixed',
             fontSize: '0.95rem',
             border: 'none'
           }}>
@@ -987,38 +995,39 @@ const SegmentFolioCuts = () => {
                 backgroundColor: '#3498db', 
                 borderBottom: 'none'
               }}>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.folio')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.location')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.segment')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.state')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.production')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.order')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.product_qty')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.product')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.color')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.thickness')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.side')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.width_cut')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.long_cut')}</th>
-                <th style={{ padding: '12px 15px', textAlign: 'center', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}></th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.folio')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.location')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.segment')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.state')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.production')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.order')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.product_qty')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.product')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.color')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.thickness')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'left', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.side')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.width_cut')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'right', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}>{t('sfc.table.long_cut')}</th>
+                <th style={{ ...baseCellStyle, textAlign: 'center', position: 'sticky', top: 0, backgroundColor: '#3498db', color: 'white', fontWeight: '600' }}></th>
               </tr>
             </thead>
             <tbody>
               {currentItems.map((detail, index) => (
-                <tr 
+                <tr
                   key={index}
-                  style={{ 
-                    borderBottom: '1px solid #e8eef3',
+                  style={{
                     backgroundColor: index % 2 === 0 ? '#fff' : '#f8fbff',
-                    transition: 'background-color 0.2s'
+                    transition: 'background-color 0.2s',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+                    borderRadius: '6px'
                   }}
                   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#f0f7ff'}}
                   onMouseOut={(e) => {e.currentTarget.style.backgroundColor = index % 2 === 0 ? '#fff' : '#f8fbff'}}
                 >
-                  <td style={{ padding: '12px 15px', fontWeight: '500' }}>{detail.folio || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>{detail.location || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>{detail.segment_name || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>
+                  <td style={{ ...baseCellStyle, fontWeight: '500' }}>{detail.folio || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>{detail.location || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>{detail.segment_name || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>
                     <span style={{
                       display: 'inline-block',
                       padding: '4px 8px',
@@ -1031,10 +1040,10 @@ const SegmentFolioCuts = () => {
                       {detail.state || '-'}
                     </span>
                   </td>
-                  <td style={{ padding: '12px 15px' }}>{detail.production || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>{detail.order || '-'}</td>
-                  <td style={{ padding: '12px 15px', textAlign: 'right', fontWeight: '500' }}>{detail.product_qty || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>
+                  <td style={{ ...baseCellStyle }}>{detail.production || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>{detail.order || '-'}</td>
+                  <td style={{ ...baseCellStyle, textAlign: 'right', fontWeight: '500' }}>{detail.product_qty || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>
                     {detail.product_code ? (
                       <span>
                         <span style={{ color: '#7f8c8d', fontSize: '0.85rem' }}>[{detail.product_code}]</span>{' '}
@@ -1044,12 +1053,12 @@ const SegmentFolioCuts = () => {
                       detail.product || '-'
                     )}
                   </td>
-                  <td style={{ padding: '12px 15px' }}>{detail.color || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>{detail.thickness || '-'}</td>
-                  <td style={{ padding: '12px 15px' }}>{detail.side || '-'}</td>
-                  <td style={{ padding: '12px 15px', textAlign: 'right' }}>{detail.width_cut || '-'}</td>
-                  <td style={{ padding: '12px 15px', textAlign: 'right' }}>{detail.long_cut || '-'}</td>
-                  <td style={{ padding: '12px 15px', textAlign: 'center' }}>
+                  <td style={{ ...baseCellStyle }}>{detail.color || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>{detail.thickness || '-'}</td>
+                  <td style={{ ...baseCellStyle }}>{detail.side || '-'}</td>
+                  <td style={{ ...baseCellStyle, textAlign: 'right' }}>{detail.width_cut || '-'}</td>
+                  <td style={{ ...baseCellStyle, textAlign: 'right' }}>{detail.long_cut || '-'}</td>
+                  <td style={{ ...baseCellStyle, textAlign: 'center' }}>
                     <button
                       onClick={() => generatePdf(detail)}
                       style={{
