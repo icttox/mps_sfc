@@ -17,9 +17,6 @@ const Header = () => {
             <Link to="/">{t('header.home')}</Link>
           </li>
           <li>
-            <Link to="/calendar">{t('header.calendar')}</Link>
-          </li>
-          <li>
             <Link to="/mps">{t('header.mps')}</Link>
           </li>
           <li>

@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import './App.css';
 
-import ProductionCalendar from './components/ProductionCalendar';
 import MpsSchedule from './components/MpsSchedule';
 import HomePage from './components/HomePage';
 import Header from './components/Header';
@@ -88,7 +87,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/calendar" element={<ProductionCalendar />} />
             <Route path="/mps" element={<MpsSchedule dbConnected={dbStatus} />} />
             <Route path="/sfc" element={<SegmentFolioCuts />} />
           </Routes>
