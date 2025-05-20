@@ -16,8 +16,7 @@ moment.locale('es');
 import CustomEventContent from './CustomEventContent';
 
 // Create a custom event content renderer
-const renderEventContent = (eventInfo) => {
-  const { t } = useTranslation();
+const renderEventContent = (eventInfo, t) => {
   const { event } = eventInfo;
   const { title, extendedProps } = event;
   const { type } = extendedProps;
@@ -1778,7 +1777,7 @@ const ProductionCalendar = ({ productionData }) => {
         slotMinWidth={24}
         snapDuration="24:00:00"
         eventMinWidth={24}
-        eventContent={(info) => renderEventContent(info)}
+        eventContent={(info) => renderEventContent(info, t)}
         height="auto"
         locales={allLocales}
         locale="es"

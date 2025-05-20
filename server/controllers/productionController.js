@@ -144,15 +144,21 @@ const generateProductionFile = async (req, res) => {
     const dockerPath = '/app/production_schedule.json';
     const localPath = path.join(__dirname, '../../production_schedule.json');
     
+    let finalFilePath = dockerPath;
+
     try {
       // Try Docker path first
       fs.writeFileSync(dockerPath, JSON.stringify(formattedData, null, 2));
       console.log(`Successfully wrote production schedule to Docker path: ${dockerPath}`);
     } catch (writeError) {
-      console.warn(`Could not write to Docker path (${dockerPath}), falling back to local path`, writeError);
+      console.warn(
+        `Could not write to Docker path (${dockerPath}), falling back to local path`,
+        writeError
+      );
       // Fall back to local path
       fs.writeFileSync(localPath, JSON.stringify(formattedData, null, 2));
       console.log(`Successfully wrote production schedule to local path: ${localPath}`);
+      finalFilePath = localPath;
     }
     
     // Also write to the current directory as an additional fallback
@@ -162,11 +168,15 @@ const generateProductionFile = async (req, res) => {
       console.log(`Successfully wrote production schedule to current directory: ${currentDirPath}`);
     } catch (localWriteError) {
       console.warn(`Could not write to current directory (${currentDirPath})`, localWriteError);
+      // If both docker and local paths failed we at least return the current directory path
+      if (!finalFilePath) {
+        finalFilePath = currentDirPath;
+      }
     }
-    
-    return res.status(200).json({ 
+
+    return res.status(200).json({
       message: 'Production schedule file generated successfully',
-      filePath: filePath
+      filePath: finalFilePath || currentDirPath
     });
   } catch (error) {
     console.error('Error generating production file:', error);
