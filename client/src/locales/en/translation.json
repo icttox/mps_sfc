@@ -2,7 +2,6 @@
   "header": {
     "title": "GEBESA PRODUCTION",
     "home": "Home",
-    "calendar": "Calendar",
     "mps": "MPS",
     "sfc": "SFC",
     "language": "Language",
@@ -19,11 +18,8 @@
     "welcome": "Welcome to the Production Management System",
     "description": "Manage and optimize your production with our specialized tools.",
     "quickAccess": "Quick Access",
-    "calendar": "Production Calendar",
     "mps": "Master Production Schedule",
     "sfc": "Shop Floor Control",
-    "calendarDescription": "View and manage production scheduling in an interactive calendar.",
-    "openCalendarView": "Go to Calendar View",
     "mpsDescription": "Master Production Schedule: Plan and optimize your long-term production.",
     "openMpsView": "Go to MPS View",
     "sfcDescription": "Real-time shop floor control and tracking. Manage orders, monitor progress, and optimize plant workflow.",
@@ -31,108 +27,11 @@
     "footer": "Production Schedule Management System"
   },
   "calendar": {
-    "title": "Production Calendar",
-    "today": "Today",
-    "month": "Month",
-    "week": "Week",
-    "day": "Day",
-    "event": "Event",
-    "resource": "Resource",
-    "viewDetails": "View Details",
-    "units": "Units",
-    "quantity": "Quantity",
-    "productCode": "Product Code",
-    "productName": "Product Name",
-    "workstation": "Workstation",
-    "workstations": "Workstations",
-    "startDate": "Start Date",
-    "endDate": "End Date",
-    "status": "Status",
-    "priority": "Priority",
-    "products": "Products",
-    "salesOrders": "Sales Orders",
-    "cuts": "Cuts",
-    "workorders": "Work Orders",
-    "manufacturingOrder": "Manufacturing Order",
     "filter": {
       "allWorkstations": "All workstations",
       "selectAll": "Select All",
       "clearAll": "Clear All",
       "noItems": "No items available"
-    },
-    "weekDays": {
-      "monday": "Monday",
-      "tuesday": "Tuesday",
-      "wednesday": "Wednesday",
-      "thursday": "Thursday",
-      "friday": "Friday",
-      "saturday": "Saturday",
-      "sunday": "Sunday",
-      "short": {
-        "mon": "Mon",
-        "tue": "Tue",
-        "wed": "Wed",
-        "thu": "Thu",
-        "fri": "Fri",
-        "sat": "Sat",
-        "sun": "Sun"
-      }
-    },
-    "details": {
-      "title": "Event Details",
-      "close": "Close",
-      "noInfo": "No information available"
-    },
-    "filters": {
-      "title": "Filters",
-      "workstation": "Workstation",
-      "product": "Product",
-      "order": "Order",
-      "date": "Date",
-      "apply": "Apply Filters",
-      "clear": "Clear Filters"
-    },
-    "events": {
-      "product": {
-        "title": "Product",
-        "code": "Code",
-        "name": "Name",
-        "quantity": "Quantity",
-        "uom": "Unit of Measure"
-      },
-      "salesOrder": {
-        "title": "Sales Order",
-        "number": "Number",
-        "partner": "Customer"
-      },
-      "cut": {
-        "title": "Cut",
-        "key": "Key",
-        "caliber": "Caliber"
-      },
-      "workorder": {
-        "title": "Work Order",
-        "state": "State",
-        "workcenter": "Work Center",
-        "quantity": "Quantity"
-      }
-    },
-    "modal": {
-      "title": "Details",
-      "close": "Close",
-      "status": "Status",
-      "priority": "Priority",
-      "dates": "Dates",
-      "resources": "Resources"
-    },
-    "search": {
-      "placeholder": "Search...",
-      "type": {
-        "product": "Product",
-        "salesOrder": "Sales Order",
-        "cut": "Cut",
-        "workorder": "Work Order"
-      }
     }
   },
   "mps": {

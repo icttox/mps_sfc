@@ -4,18 +4,13 @@ A MERN stack application for managing and visualizing manufacturing production s
 
 ## Features
 
-- Calendar view of production schedule
-- Workstations displayed as rows
-- Products displayed as draggable items on the calendar
-- Tooltips showing detailed product information
-- Ability to drag and drop products to reschedule them
 - Generate production schedule directly from database
 - Filter products by location/warehouse
 - Search functionality
 
 ## Tech Stack
 
-- **Frontend**: React, FullCalendar, React Router, Axios, React Tooltip
+- **Frontend**: React, React Router, Axios
 - **Backend**: Node.js, Express
 - **Database**: PostgreSQL (previously used JSON file)
 
