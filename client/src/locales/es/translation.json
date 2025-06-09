@@ -2,7 +2,6 @@
   "header": {
     "title": "GEBESA PRODUCCIÓN",
     "home": "Inicio",
-    "calendar": "Vista Calendario",
     "mps": "Vista MPS",
     "sfc": "Vista SFC"
   },
@@ -16,11 +15,8 @@
     "welcome": "Bienvenido al Sistema de Producción GEBESA",
     "description": "Seleccione un módulo del menú de navegación para comenzar",
     "quickAccess": "Acceso Rápido",
-    "calendar": "Calendario de Producción",
     "mps": "Programa Maestro de Producción",
     "sfc": "Control de Piso de Producción",
-    "calendarDescription": "Visualice y gestione su programa de producción en un calendario interactivo. Vea órdenes de fabricación, actividades y recursos en una línea de tiempo.",
-    "openCalendarView": "Ir a Vista Calendario",
     "mpsDescription": "Gestione el programa maestro de producción. Planifique y optimice la producción a mediano y largo plazo, asignando recursos y fechas de manera eficiente.",
     "openMpsView": "Ir a Vista MPS",
     "sfcDescription": "Control y seguimiento en tiempo real de la producción en piso. Gestione órdenes, monitoree el progreso y optimice el flujo de trabajo en la planta.",
@@ -28,109 +24,12 @@
     "footer": "Sistema de Gestión de Programa de Producción ©"
   },
   "calendar": {
-    "title": "Calendario de Producción",
-    "today": "Hoy",
-    "month": "Mes",
-    "week": "Semana",
-    "day": "Día",
-    "event": "Evento",
-    "resource": "Recurso",
-    "viewDetails": "Ver Detalles",
-    "units": "Unidades",
-    "quantity": "Cantidad",
-    "productCode": "Código de Producto",
-    "productName": "Nombre de Producto",
-    "workstation": "Ubicación",
-    "workstations": "Ubicaciones",
-    "startDate": "Fecha Inicio",
-    "endDate": "Fecha Fin",
-    "status": "Estado",
-    "priority": "Prioridad",
-    "products": "Productos",
-    "salesOrders": "Órdenes de Venta",
-    "cuts": "Cortes",
-    "workorders": "Órdenes de Trabajo",
-    "manufacturingOrder": "Orden de Fabricación",
     "filter": {
       "allWorkstations": "Todas las ubicaciones",
       "selectAll": "Seleccionar Todo",
       "clearAll": "Limpiar Todo",
       "noItems": "No hay elementos disponibles",
       "selected": "seleccionados"
-    },
-    "weekDays": {
-      "monday": "Lunes",
-      "tuesday": "Martes",
-      "wednesday": "Miércoles",
-      "thursday": "Jueves",
-      "friday": "Viernes",
-      "saturday": "Sábado",
-      "sunday": "Domingo",
-      "short": {
-        "mon": "Lun",
-        "tue": "Mar",
-        "wed": "Mié",
-        "thu": "Jue",
-        "fri": "Vie",
-        "sat": "Sáb",
-        "sun": "Dom"
-      }
-    },
-    "details": {
-      "title": "Detalles del Evento",
-      "close": "Cerrar",
-      "noInfo": "No hay información disponible"
-    },
-    "filters": {
-      "title": "Filtros",
-      "workstation": "Estación de Trabajo",
-      "product": "Producto",
-      "order": "Orden",
-      "date": "Fecha",
-      "apply": "Aplicar Filtros",
-      "clear": "Limpiar Filtros"
-    },
-    "events": {
-      "product": {
-        "title": "Producto",
-        "code": "Código",
-        "name": "Nombre",
-        "quantity": "Cantidad",
-        "uom": "Unidad de Medida"
-      },
-      "salesOrder": {
-        "title": "Orden de Venta",
-        "number": "Número",
-        "partner": "Cliente"
-      },
-      "cut": {
-        "title": "Corte",
-        "key": "Clave",
-        "caliber": "Calibre"
-      },
-      "workorder": {
-        "title": "Orden de Trabajo",
-        "state": "Estado",
-        "workcenter": "Centro de Trabajo",
-        "quantity": "Cantidad"
-      }
-    },
-    "modal": {
-      "title": "Detalles",
-      "close": "Cerrar",
-      "status": "Estado",
-      "priority": "Prioridad",
-      "dates": "Fechas",
-      "resources": "Recursos"
-    },
-    "search": {
-      "placeholder": "Buscar...",
-      "type": {
-        "product": "Producto",
-        "salesOrder": "Orden de Venta",
-        "cut": "Corte",
-        "workorder": "Orden de Trabajo"
-      }
     }
   },
   "mps": {

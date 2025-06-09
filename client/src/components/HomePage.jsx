@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaCalendarAlt, FaTable, FaArrowRight, FaClipboardList } from 'react-icons/fa';
+import { FaTable, FaArrowRight, FaClipboardList } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
@@ -38,48 +38,6 @@ const HomePage = () => {
         justifyContent: 'center',
         gap: '30px'
       }}>
-        <div className="view-card" style={{
-          backgroundColor: '#f8f9fa',
-          border: '1px solid #e2e6ea',
-          borderRadius: '8px',
-          padding: '30px',
-          width: '350px',
-          boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-          transition: 'transform 0.3s, box-shadow 0.3s',
-          cursor: 'pointer'
-        }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.transform = 'translateY(-5px)';
-          e.currentTarget.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
-        }}
-        >
-          <div style={{ fontSize: '3rem', color: '#3498db', marginBottom: '20px' }}>
-            <FaCalendarAlt />
-          </div>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', color: '#2c3e50' }}>
-            {t('header.calendar')}
-          </h2>
-          <p style={{ color: '#555', marginBottom: '25px', lineHeight: '1.5' }}>
-            {t('homePage.calendarDescription')}
-          </p>
-          <Link to="/calendar" style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            backgroundColor: '#3498db',
-            color: 'white',
-            padding: '10px 20px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontWeight: '500',
-            gap: '8px'
-          }}>
-            {t('homePage.openCalendarView')} <FaArrowRight />
-          </Link>
-        </div>
         
         <div className="view-card" style={{
           backgroundColor: '#f8f9fa',
