@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { FaChevronDown, FaChevronRight, FaSave, FaSearch, FaTimes, FaFileExcel, FaCalendarAlt, FaFilter } from 'react-icons/fa';
 import axios from 'axios';
-import ResourceFilter from './ResourceFilter';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import { useTranslation } from 'react-i18next';
@@ -442,12 +441,6 @@ const MpsSchedule = ({ dbConnected }) => {
     }
   };
 
-  // Handle location filter change
-  const handleLocationFilterChange = (selected) => {
-    setSelectedLocations(selected);
-  };
-  
-  // Export to Excel function
   const exportToExcel = () => {
     // Initialize an array to store flattened data for Excel
     const excelData = [];
@@ -1884,14 +1877,6 @@ const MpsSchedule = ({ dbConnected }) => {
             border: '1px solid #e2e6ea',
             borderRadius: '4px'
           }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
-              <ResourceFilter
-                title={t('mps.locations')}
-                items={availableLocations}
-                onFilterChange={handleLocationFilterChange}
-                initiallyOpen={false}
-              />
-            </div>
             
             <div style={{ 
               display: 'flex', 

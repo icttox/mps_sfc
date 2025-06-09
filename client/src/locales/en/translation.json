@@ -26,14 +26,6 @@
     "openSfcView": "Go to SFC View",
     "footer": "Production Schedule Management System"
   },
-  "calendar": {
-    "filter": {
-      "allWorkstations": "All workstations",
-      "selectAll": "Select All",
-      "clearAll": "Clear All",
-      "noItems": "No items available"
-    }
-  },
   "mps": {
     "title": "Master Production Schedule",
     "filters": {
