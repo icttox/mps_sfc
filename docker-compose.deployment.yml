@@ -1,0 +1,32 @@
+services:
+  server:
+    image: server:latest
+    container_name: production_server
+    restart: always
+    environment:
+      NODE_ENV: production
+      PORT: 5001
+    ports:
+      - "${SERVER_PORT}:5001"
+    volumes:
+      - ./.env:/app/.env:ro
+    networks:
+      - mps_network
+
+  client:
+    image: client:latest
+    container_name: production_client
+    restart: always
+    depends_on:
+      - server
+    ports:
+      - "8090:8090"
+    networks:
+      - mps_network
+
+volumes:
+  shared_data:
+
+networks:
+  mps_network:
+    driver: bridge

@@ -11,14 +11,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Client build: `cd client && npm run build`
 - Client lint: `cd client && npm run lint`
 
-## Code Style Guidelines
-- React: Use functional components with hooks (useState, useEffect, useMemo)
-- JavaScript: Use modern ES6+ syntax with arrow functions
-- Naming: PascalCase for components, camelCase for variables/functions
-- Event handlers: Prefix with 'handle' or 'on'
-- Error handling: Use try/catch with specific error messages and HTTP status codes
-- Server: Use async/await with proper error handling and logging
-- Comments: Use JSDoc style for function documentation
-- Formatting: 2-space indentation, single quotes for strings
-- CSS: Use hyphenated lowercase for class names with component-specific prefixes
-- Components: Export as default at end of file
+# Follow this guidelines
+- general instructions @.claude/rules/general_instructions.md
+- code styles and preferences @.claude/rules/code_styles_and_preferences.md
+- git workflow @.claude/rules/git-preferences.md
+- docker preferences @.claude/rules/docker_preferences.md
+- nginx preferences @.claude/rules/nginx_preferences.md
