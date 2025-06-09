@@ -23,15 +23,6 @@
     "openSfcView": "Ir a Vista SFC",
     "footer": "Sistema de Gestión de Programa de Producción ©"
   },
-  "calendar": {
-    "filter": {
-      "allWorkstations": "Todas las ubicaciones",
-      "selectAll": "Seleccionar Todo",
-      "clearAll": "Limpiar Todo",
-      "noItems": "No hay elementos disponibles",
-      "selected": "seleccionados"
-    }
-  },
   "mps": {
     "title": "Programa Maestro de Producción",
     "locations": "Ubicaciones",

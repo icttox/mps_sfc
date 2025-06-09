@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { FaChevronDown, FaChevronRight, FaSave, FaSearch, FaTimes, FaFileExcel, FaCalendarAlt, FaFilter } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaSave, FaSearch, FaTimes, FaFileExcel, FaFilter } from 'react-icons/fa';
 import axios from 'axios';
-import ResourceFilter from './ResourceFilter';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import { useTranslation } from 'react-i18next';
@@ -102,7 +101,6 @@ const DateRangeFilter = ({
         alignItems: 'center',
         color: '#0056b3'
       }}>
-        <FaCalendarAlt style={{ marginRight: '8px' }} />
         {t('mps.filters.dateRange')}
       </h3>
       
@@ -219,8 +217,6 @@ const MpsSchedule = ({ dbConnected }) => {
   const [days, setDays] = useState([]);
   const [expandedRows, setExpandedRows] = useState({});
   const [expandedSubRows, setExpandedSubRows] = useState({});
-  const [selectedLocations, setSelectedLocations] = useState([]);
-  const [availableLocations, setAvailableLocations] = useState([]);
   const [textFilters, setTextFilters] = useState({
     product: '',
     salesOrder: '',
@@ -349,12 +345,7 @@ const MpsSchedule = ({ dbConnected }) => {
     
     setDays(generateDays());
     
-    // If productionData is already available, we can set up locations
-    if (productionData && typeof productionData === 'object') {
-      const locations = Object.keys(productionData);
-      setAvailableLocations(locations);
-      setSelectedLocations(locations); // Initially select all locations
-    }
+    // No location filtering
   }, [startDate, endDate, productionData]);
 
   // Load saved MPS data
@@ -442,12 +433,6 @@ const MpsSchedule = ({ dbConnected }) => {
     }
   };
 
-  // Handle location filter change
-  const handleLocationFilterChange = (selected) => {
-    setSelectedLocations(selected);
-  };
-  
-  // Export to Excel function
   const exportToExcel = () => {
     // Initialize an array to store flattened data for Excel
     const excelData = [];
@@ -871,10 +856,8 @@ const MpsSchedule = ({ dbConnected }) => {
       return hasCommitmentDate(orderDetails);
     };
     
-    // First level rows (warehouses) - filter by selected locations
-    Object.entries(productionData)
-      .filter(([warehouseName]) => selectedLocations.includes(warehouseName))
-      .forEach(([warehouseName, products]) => {
+    // First level rows (warehouses)
+    Object.entries(productionData).forEach(([warehouseName, products]) => {
         // If we have active text filters, we need to pre-check if this warehouse
         // has any products that match the filters before creating the warehouse row
         if (hasActiveTextFilters) {
@@ -1406,7 +1389,7 @@ const MpsSchedule = ({ dbConnected }) => {
     });
     
     return rowData;
-  }, [productionData, selectedLocations, textFilters, showNoCommitmentOrders]); // Recalculate when filters or data change
+  }, [productionData, textFilters, showNoCommitmentOrders]); // Recalculate when filters or data change
   
   // Toggle row expansion - memoized with useCallback
   const toggleRowExpansion = useCallback((rowId) => {
@@ -1884,14 +1867,6 @@ const MpsSchedule = ({ dbConnected }) => {
             border: '1px solid #e2e6ea',
             borderRadius: '4px'
           }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
-              <ResourceFilter
-                title={t('mps.locations')}
-                items={availableLocations}
-                onFilterChange={handleLocationFilterChange}
-                initiallyOpen={false}
-              />
-            </div>
             
             <div style={{ 
               display: 'flex', 
