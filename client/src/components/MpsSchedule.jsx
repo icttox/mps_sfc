@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { FaChevronDown, FaChevronRight, FaSave, FaSearch, FaTimes, FaFileExcel, FaCalendarAlt, FaFilter } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaSave, FaSearch, FaTimes, FaFileExcel, FaFilter } from 'react-icons/fa';
 import axios from 'axios';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
@@ -101,7 +101,6 @@ const DateRangeFilter = ({
         alignItems: 'center',
         color: '#0056b3'
       }}>
-        <FaCalendarAlt style={{ marginRight: '8px' }} />
         {t('mps.filters.dateRange')}
       </h3>
       
@@ -346,7 +345,7 @@ const MpsSchedule = ({ dbConnected }) => {
     
     setDays(generateDays());
     
-    // No location filtering after calendar removal
+    // No location filtering
   }, [startDate, endDate, productionData]);
 
   // Load saved MPS data
