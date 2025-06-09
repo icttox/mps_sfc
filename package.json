@@ -8,7 +8,8 @@
     "server": "cd server && npm run server",
     "client": "cd client && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "test": "echo \"No tests configured\" && exit 0"
   },
   "keywords": [
     "production",
